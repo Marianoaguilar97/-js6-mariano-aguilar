@@ -20,7 +20,9 @@ function renderProductos () {
 }
 renderProductos();
 //array carrito
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("CARRITO")) || [];
+actualizarCarrito();
+
 //agregar al carro
 function AgregarCarrito (id) {
     //validacion si ya existe item en carrito
@@ -41,6 +43,8 @@ function AgregarCarrito (id) {
 function actualizarCarrito(){
     renderItemsCarrito();
     renderTotal()
+    //guardado carrito
+    localStorage.setItem("CARRITO",JSON.stringify(carrito));
 }
 // calcular y renderizar total
 function renderTotal() {
