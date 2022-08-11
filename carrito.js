@@ -6,7 +6,7 @@ const carritoTotal = document.querySelector(".total");
 function renderProductos () {
     viajes.forEach( (viaje) => {
         productosEl.innerHTML += ` 
-        <div class="seccionEncuadrado--mediano ">
+        <div class="seccionEncuadrado--mediano">
         <div class="seccion--encuadradoImagen" title="Caribe"><img src="${viaje.imgSrc}" alt="caribe" class="imgEncuadrado"></div>
         <h2>${viaje.nombre}</h2>
         <p>${viaje.fecha}</p>
